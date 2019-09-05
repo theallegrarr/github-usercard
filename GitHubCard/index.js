@@ -110,7 +110,17 @@ followersArray.forEach(follower => {
 });
 
 
+function createFollowersArray(){
+  axios.get('https://api.github.com/users/theallegrarr/following').then(response => {
+    followersArrayII = response.data;
+    //console.log(response.data[0]);
+    followersArrayII.forEach(user => createCard(user.login));
+  }).catch(error => {
+    console.log(error);
+  })
+}
 
+createFollowersArray();
 
 
 /* List of LS Instructors Github username's: 
