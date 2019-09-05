@@ -108,7 +108,9 @@ createCard('theallegrarr');
 followersArray.forEach(follower => {
   createCard(follower);
 });
-createFollowersArray();
+
+
+
 
 
 /* List of LS Instructors Github username's: 
